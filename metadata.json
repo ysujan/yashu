@@ -1,0 +1,6 @@
+{
+  "name": "Free Cloud Storage",
+  "description": "A free, private cloud storage platform with folder organization, instant file previews, drag-and-drop upload, and 10 TB storage.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

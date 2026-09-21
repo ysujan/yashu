@@ -1,0 +1,81 @@
+{
+  "entities": {
+    "fileItem": {
+      "title": "FileItem",
+      "description": "Represents a stored file or folder in the cloud storage database.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 255
+        },
+        "type": {
+          "type": "string",
+          "maxLength": 32
+        },
+        "size": {
+          "type": "number"
+        },
+        "parentId": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "createdAt": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "updatedAt": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "starred": {
+          "type": "boolean"
+        },
+        "inTrash": {
+          "type": "boolean"
+        },
+        "trashedAt": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "mimeType": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "textData": {
+          "type": "string",
+          "maxLength": 800000
+        },
+        "dataUrl": {
+          "type": "string",
+          "maxLength": 800000
+        },
+        "ownerId": {
+          "type": "string",
+          "maxLength": 128
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "type",
+        "size",
+        "createdAt",
+        "updatedAt",
+        "starred",
+        "inTrash",
+        "ownerId"
+      ]
+    }
+  },
+  "firestore": {
+    "/cloud_files/{fileId}": {
+      "schema": "fileItem",
+      "description": "User cloud files and folders persisted permanently."
+    }
+  }
+}
